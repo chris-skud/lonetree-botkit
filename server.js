@@ -6,6 +6,8 @@ const client = new twilio.RestClient(
   process.env.TWILIO_AUTH_TOKEN
 )
 
+const fromNum = process.env.TWILIO_FROM_NUMBER
+
 controller.spawn({
   token: process.env.SLACK_VERIFY_TOKEN,
 }).startRTM()
@@ -18,7 +20,7 @@ controller.hears('^sms',['direct_message'], function(bot, msg) {
 
   client.sms.messages.create({
     to: `+1${parts[1]}`,
-    from: '+17207702060',
+    from: `+1${fromNum}`,
     body: `${parts[2]}`
   }, function(error, message) {
     if (!error) {
