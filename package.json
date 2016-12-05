@@ -1,0 +1,23 @@
+{
+  "name": "LoneTreeElementaryDemo",
+  "version": "1.0.0",
+  "description": "Fun",
+  "scripts": {
+    "watch": "nodemon server.js",
+    "test": "standard"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chris-skud/lone-tree.git"
+  },
+  "author": "Chris Skudlarczyk",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/chris-skud/lone-tree/issues"
+  },
+  "homepage": "https://github.com/chris-skud/lone-tree#readme",
+  "dependencies": {
+    "botkit": "^0.4.2",
+    "twilio": "^2.11.1"
+  }
+}
